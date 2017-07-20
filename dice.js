@@ -5,28 +5,48 @@ var $dice = $(".dice");
 
 
 function randomNum(){
+	
 	var number = [];
 	number.push(Math.ceil(Math.random() * 6))
 	if  (number == "1"){
-	return one()
-	}
+		
+		return one();
+		}	
+	
+	
 	else if  (number == "2"){
-	return two()
-	}
-	else if  (number == "3"){
-	return three()
-	}
-	else if  (number == "4"){
-	return four()
-	}
-	else if  (number == "5"){
-	return five()
-	}
-	else if  (number == "6"){
-	return six()
-	}
+		
+		return two();
+		}	
 
-}
+	else if  (number == "3"){
+	
+		return three();
+		}
+	
+
+	else if  (number == "4"){
+		
+		return four();
+		
+		}
+	
+	
+	else if  (number == "5"){
+	
+		return five();
+		
+		}
+	
+	
+	else if  (number == "6"){
+		
+		return six();
+		}
+	}
+	
+	
+
 
 
 function one(){
@@ -35,7 +55,7 @@ function one(){
 		"class": "dice",
 		"src": "one.png"
 	});
-
+	$(".dice").empty();
 	imgOne.appendTo($('.dice'))
 }
 
@@ -45,7 +65,7 @@ function two(){
 		"class": "dice",
 		"src": "two.png"
 	});
-
+	$(".dice").empty();
 	imgOne.appendTo($('.dice'))
 }
 
@@ -55,7 +75,7 @@ function three(){
 		"class": "dice",
 		"src": "three.png"
 	});
-
+	$(".dice").empty();
 	imgOne.appendTo($('.dice'))
 }
 
@@ -65,7 +85,7 @@ function four(){
 		"class": "dice",
 		"src": "four.png"
 	});
-
+	$(".dice").empty();
 	imgOne.appendTo($('.dice'))
 }
 
@@ -75,7 +95,7 @@ function five(){
 		"class": "dice",
 		"src": "five.png"
 	});
-
+	$(".dice").empty();
 	imgOne.appendTo($('.dice'))
 }
 
@@ -85,7 +105,7 @@ function six(){
 		"class": "dice",
 		"src": "six.png"
 	});
-
+	$(".dice").empty();
 	imgOne.appendTo($('.dice'))
 }
 
@@ -93,29 +113,18 @@ function six(){
 
 
 function roll(fun){
-	var x = fun()
-	$dice.text(x) 
+	var x = fun();
+	$dice.text(x);
 }
-
 
 function click(thebutton){
 	thebutton.on("click", function(event){
 		event.preventDefault();
 		roll(randomNum)
+		roll(randomNum)
 	})
 }
 
-
-var imageDice = []
-var imageDice = {
-	1: "one.png",
-	2: "two.png",
-	3: "three.png",
-	4: "four.png",
-	5: "five.png",
-	6: "six.png"
-
-}
 
 
 click($button)
