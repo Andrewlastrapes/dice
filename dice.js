@@ -7,7 +7,25 @@ var $dice = $(".dice");
 function randomNum(){
 	var number = [];
 	number.push(Math.ceil(Math.random() * 6))
+	if  (number == "1"){
 	return one()
+	}
+	else if  (number == "2"){
+	return two()
+	}
+	else if  (number == "3"){
+	return three()
+	}
+	else if  (number == "4"){
+	return four()
+	}
+	else if  (number == "5"){
+	return five()
+	}
+	else if  (number == "6"){
+	return six()
+	}
+
 }
 
 
