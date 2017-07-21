@@ -9,39 +9,24 @@ function randomNum(){
 	var number = [];
 	number.push(Math.ceil(Math.random() * 6))
 	if  (number == "1"){
-		
-		return one();
+		one();
 		}	
-	
-	
 	else if  (number == "2"){
-		
-		return two();
+		two();
 		}	
-
 	else if  (number == "3"){
-	
-		return three();
+		three();
 		}
-	
-
 	else if  (number == "4"){
-		
-		return four();
+		four();
 		
 		}
-	
-	
 	else if  (number == "5"){
-	
-		return five();
+		five();
 		
 		}
-	
-	
 	else if  (number == "6"){
-		
-		return six();
+		six();
 		}
 	}
 	
@@ -121,7 +106,7 @@ function click(thebutton){
 	thebutton.on("click", function(event){
 		event.preventDefault();
 		roll(randomNum)
-		roll(randomNum)
+
 	})
 }
 

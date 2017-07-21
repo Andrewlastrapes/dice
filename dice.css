@@ -1,6 +1,8 @@
 
 
-
+.main1 {
+	background-color: rgb(208,208,208)
+}
 
 
 .header {
@@ -8,16 +10,18 @@
 	font-family: impact;
 	font-size: 3em;
 	color: #0066cc;
+	padding-top: 5%
 	
 }
 
 
 .button {
 	text-align: center;
+
 }
 
 .dice {
 	text-align: center;
-
+	padding-top: 4%
 
 }
