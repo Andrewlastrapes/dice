@@ -1,5 +1,6 @@
 var $button = $(".button");
 var $dice = $(".dice"); 
+var $dice2 = $(".dice2")
 
 
 
@@ -30,7 +31,34 @@ function randomNum(){
 		}
 	}
 	
+
+
+function randomNum2(){
 	
+	var number = [];
+	number.push(Math.ceil(Math.random() * 6))
+	if  (number == "1"){
+		seven();
+		}	
+	else if  (number == "2"){
+		eight();
+		}	
+	else if  (number == "3"){
+		nine();
+		}
+	else if  (number == "4"){
+		ten();
+		
+		}
+	else if  (number == "5"){
+		eleven();
+		
+		}
+	else if  (number == "6"){
+		twelve();
+		}
+	}
+
 
 
 
@@ -95,6 +123,76 @@ function six(){
 }
 
 
+function seven(){
+
+	var imgOne = $('<img />', {
+		"class": "dice2",
+		"src": "one.png"
+	});
+	$(".dice2").empty();
+	imgOne.appendTo($('.dice2'))
+}
+
+function eight(){
+
+	var imgOne = $('<img />', {
+		"class": "dice2",
+		"src": "two.png"
+	});
+	$(".dice2").empty();
+	imgOne.appendTo($('.dice2'))
+}
+
+function nine(){
+
+	var imgOne = $('<img />', {
+		"class": "dice2",
+		"src": "three.png"
+	});
+	$(".dice2").empty();
+	imgOne.appendTo($('.dice2'))
+}
+
+function ten(){
+
+	var imgOne = $('<img />', {
+		"class": "dice2",
+		"src": "four.png"
+	});
+	$(".dice2").empty();
+	imgOne.appendTo($('.dice2'))
+}
+
+function eleven(){
+
+	var imgOne = $('<img />', {
+		"class": "dice2",
+		"src": "five.png"
+	});
+	$(".dice2").empty();
+	imgOne.appendTo($('.dice2'))
+}
+
+function twelve(){
+
+	var imgOne = $('<img />', {
+		"class": "dice2",
+		"src": "six.png"
+	});
+	$(".dice2").empty();
+	imgOne.appendTo($('.dice2'))
+}
+
+
+
+
+
+
+
+function roll2(fun){
+	var x = fun();
+	$dice2.text(x);
+}
 
 
 function roll(fun){
@@ -106,6 +204,7 @@ function click(thebutton){
 	thebutton.on("click", function(event){
 		event.preventDefault();
 		roll(randomNum)
+		roll2(randomNum2)
 
 	})
 }
