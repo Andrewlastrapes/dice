@@ -1,66 +1,81 @@
 var $button = $(".button");
 var $dice = $(".dice"); 
 var $dice2 = $(".dice2")
+var $result = $(".result")
 
 
-
+// Make a function that randomly generates a number between one and six for the first die. 
 
 function randomNum(){
 	
-	var number = [];
-	number.push(Math.ceil(Math.random() * 6))
-	if  (number == "1"){
+	
+	var number = Math.ceil(Math.random() * 6);
+	
+	
+	if  (number == 1){
 		one();
+
+		
 		}	
-	else if  (number == "2"){
+	else if  (number == 2){
 		two();
+	
 		}	
-	else if  (number == "3"){
+	else if  (number == 3){
 		three();
+		
 		}
-	else if  (number == "4"){
+	else if  (number == 4){
 		four();
 		
 		}
-	else if  (number == "5"){
+	else if  (number == 5){
 		five();
 		
+		
 		}
-	else if  (number == "6"){
+	else if  (number == 6){
 		six();
+		
 		}
+		return number;
 	}
 	
-
+// Make a function that randomly generates a number between one and six for the second die. 
 
 function randomNum2(){
 	
-	var number = [];
-	number.push(Math.ceil(Math.random() * 6))
-	if  (number == "1"){
+	var number = Math.ceil(Math.random() * 6);
+	
+	if  (number == 1){
 		seven();
+		
 		}	
-	else if  (number == "2"){
+	else if  (number == 2){
 		eight();
+		
 		}	
-	else if  (number == "3"){
+	else if  (number == 3){
 		nine();
+		
 		}
-	else if  (number == "4"){
+	else if  (number == 4){
 		ten();
 		
 		}
-	else if  (number == "5"){
+	else if  (number == 5){
 		eleven();
 		
 		}
-	else if  (number == "6"){
+	else if  (number == 6){
 		twelve();
+		
 		}
+		return number
 	}
 
 
-
+// Links random number to png images. 
 
 function one(){
 
@@ -185,30 +200,27 @@ function twelve(){
 
 
 
-
-
-
-
 function roll2(fun){
 	var x = fun();
-	$dice2.text(x);
+	
 }
 
 
 function roll(fun){
 	var x = fun();
-	$dice.text(x);
+	
 }
+
+
 
 function click(thebutton){
 	thebutton.on("click", function(event){
 		event.preventDefault();
-		roll(randomNum)
-		roll2(randomNum2)
-
+		roll(randomNum);
+		roll2(randomNum2);
+		$result.text(randomNum() + randomNum2())
 	})
 }
-
 
 
 click($button)
